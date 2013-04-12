@@ -23,7 +23,7 @@ class Squid < Formula
   def install
     system "./configure", "--disable-debug", "--disable-dependency-tracking",
                           "--prefix=#{prefix}",
-                          "--localstatedir=#{var}"
+                          "--localstatedir=#{var}", "-enable-ssl"
     system "make install"
   end
 
